@@ -1,0 +1,107 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    margin: 0;
+    color: #333;
+    background: linear-gradient(to bottom right, #EAC6AB 30%, #9A87E2);
+}
+.Whole{
+    width: 100%;
+    height: 100%;
+}
+.Register{
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 10px;
+    background-color: rgb(247, 247, 247);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.Register h2{
+    font-size: 50px;
+    text-align: center;
+    font-family: Baloo2;
+    font-weight: 900;
+    margin: 0;
+}
+.Register input{
+    display: flex;
+    padding: 5px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: solid #a8a8a8 2px;
+    margin: auto;
+}
+.EnviarButt {
+    margin-top: 20px;
+    justify-content: left;
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+.EnviarButt:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+}
+
+.EnviarButt:hover {
+    color: #e8e8e8;
+    cursor: pointer;
+}
+
+.EnviarButt:hover::before {
+    width: 100%;
+}
+.Register-Buttons{
+    display: flex;
+    gap:2rem;
+}
+.Register-Buttons p{
+    font-size: 15px;
+}
+.Inicio-Sesion{
+    text-align: center;
+    text-decoration: none;
+    color: #9A87E2;
+}
+.Inicio-Sesion:hover{
+    color: #8776c4;
+    transition: all 250ms;
+    cursor: pointer;
+}
+.Terminos{
+    font-size: 15px;
+    text-align: center;
+}

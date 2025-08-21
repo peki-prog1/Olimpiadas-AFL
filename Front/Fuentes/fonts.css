@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url(Fuentes/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf),
+    url(Fuentes/Open_Sans/OpenSans-Italic-VariableFont_wdth\,wght.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Baloo2';
+    src: url(Fuentes/Baloo_2/Baloo2-VariableFont_wght.ttf);
+    font-weight: normal;
+    font-style: normal
+}
+/*@font-face {
+/*    font-family: ;
+/*    src: url();
+/*}

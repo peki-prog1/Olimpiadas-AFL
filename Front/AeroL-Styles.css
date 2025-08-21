@@ -1,0 +1,249 @@
+:root {
+    --color-principal: #22394e;
+    --color-secundario: #E1E1E8;
+    --blanco: #ffffff;
+  }
+  *{
+    scroll-behavior:smooth;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-secundario);
+    color: #333;
+  }
+  
+  header {
+    background-color: var(--color-principal);
+    color: var(--blanco);
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+    #modal-toggle {
+      display: none;
+    }
+
+    .open-modal-btn {
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .modal-content h2{
+      color: #212121;
+    }
+
+    #modal-toggle:checked + .modal {
+      display: flex;
+    }
+    .FormInputs{
+      font-size: 30px;
+      margin-top: 20px;
+      border-radius: 8px;
+      border: solid #c4c4c4 2px;
+    }
+.EnviarButt {
+    margin-top: 20px;
+    justify-content: left;
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.EnviarButt:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+}
+
+.EnviarButt:hover {
+    color: #e8e8e8;
+}
+
+.EnviarButt:hover::before {
+    width: 100%;
+}
+
+.close-modal {
+      color: #acadaf;
+      cursor: pointer;
+      text-decoration: none;
+    }
+.close-modal:hover{
+      color: #7c7d80;
+      font-weight: bold;
+}
+
+.CloseLogin{
+      position: absolute;
+    }
+
+.paquetes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+  }
+  
+.paquete {
+    background-color: var(--color-secundario);
+    padding: 1em;
+    border-radius: 6px;
+    border-left: 5px solid var(--color-principal);
+    box-shadow: 2px 2px 7px #272727;
+  }
+.paquete img {
+    object-fit: cover;
+    width: 100%;
+    height: 60%;
+    border-radius: 5px;
+  }
+  
+footer {
+    background-color: var(--color-principal);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1em;
+  }
+
+  .Banner{
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+
+  }
+  .Banner-Content {
+    width: 100%;
+    object-fit:cover;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  .Banner-Content img{
+    width: 100%;
+  }
+  .Banner-Text{
+    position: absolute;
+    padding-left: 40px;
+    margin-top: 30px;
+  }
+  .Banner-Text h1{
+    color: #22394e;
+    font-size: 6vw;
+  }
+  .Banner-Stats{
+    color: rgb(236, 237, 240);
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    font-size: 1.5vw;
+    font-weight:500;
+    justify-items: center;
+    display: flex;
+    gap: 3rem;
+    background:linear-gradient(rgba(0,0,0,0.4) ,rgba(0,0,0,0.4));
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+.Banner-img p span{
+    font-size: 25px;
+}
+
+.cart-toggle{
+  background: none;
+  border:none;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  padding: 2px;
+  margin-left: 2rem;
+}
+.cart-toggle:hover{
+  cursor:pointer;
+}
+.PaquetesCarrito{
+  display: flex;
+  gap: 2rem;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  height: 100%;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+.cart.open {
+  right: 0;
+}
+.cart-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.close-btn{
+  background: none;
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+}
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}

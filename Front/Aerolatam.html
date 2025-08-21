@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroLatam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="AeroL-Styles.css">
+  <link rel="stylesheet" href="Fuentes/fonts.css">
+</head>
+<body>
+  <script src="script.js"></script>
+  
+  <header>
+    <h1>AeroLatam</h1>
+    <nav>
+          <!-- Botón para abrir modal -->
+    <label for="modal-toggle" class="open-modal-btn">Ingresar</label>
+
+    <!-- Input oculto -->
+    <input type="checkbox" id="modal-toggle">
+
+    <!-- Modal -->
+    <div class="modal">
+    <div class="modal-content">
+          <span class="close" id="close-login">&times;</span>
+          <div class="CloseLogin">
+          <label for="modal-toggle" class="close-modal">X</label>
+          </div>
+          <h2>Iniciar Sesión</h2>
+          <form class="ModalCont">
+            <input class="FormInputs" type="email" placeholder="Correo electrónico" required> <br>
+            <input class="FormInputs" type="password" placeholder="Contraseña" required> 
+            <br>
+            <button class="EnviarButt"> Enviar </button>
+          </form>
+      </div>
+    </div>
+      <a href="Register.html">Registrarse</a>
+      <a href="#paquetes">Paquetes de Vuelo</a>
+      <button class="cart-toggle" onclick="toggleCart()">🛒</button>
+      <div id="cart" class="cart">
+        <div class="cart-header">
+          <span>carrito</span>
+          <button class="close-btn" onclick="togglCart()">0</button>
+        </div>
+      
+    </nav>
+
+  </header>
+  <div class="Banner">
+    <div class="Banner-Content">
+      <div class="Banner-Text">
+        <h1>AeroLatam</h1>
+        <div class="Banner-Stats">
+        <h2>+3000 Vuelos</h2><hr><h2>Vuelos internacionales</h2><hr><h2>+50 Años</h2>
+        </div>
+        </div>
+        <img src="BannerImg.jpg" alt="">
+    </div>
+    </div>
+  </div>
+  <main>
+
+    <!-- PAQUETES -->
+    <section id="paquetes" class="section-paquetes">
+      <h2>Paquetes de Vuelo</h2>
+        <ul id="cart-items"></ul>
+      </div>
+      <div class="paquetes-grid">
+        <div class="paquete">
+          <img src="Imagenes/bsas.jpg" alt="Bsas">
+          <h3>Santiago - Buenos Aires</h3>
+          <p>Desde $199 USD</p>
+          <button onclick="aadToCart('Producto')">Agregar</button>
+        </div>
+        <div class="paquete">
+          <img src="Imagenes/CDMX.jpg" alt="CDMX">
+          <h3>Lima - Ciudad de México</h3>
+          <p>Desde $299 USD</p>
+          <button onclick="aadToCart('Producto')">Agregar</button>
+        </div>
+        <div class="paquete">
+          <img src="Imagenes/Miamee.jpg" alt="CDMX">
+          <h3>Bogotá - Miami</h3>
+          <p>Desde $349 USD</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AeroLatam. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
